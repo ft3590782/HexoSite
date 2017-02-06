@@ -3,9 +3,10 @@ title: Windows系统下使用Hexo并部署到GitHub
 date: 2017-02-04 16:47:50
 tags:
 ---
-# Windows系统下使用Hexo并部署到GitHub
 需用到的程序:
+
 1.[Git for Windows](https://git-for-windows.github.io/)
+
 2.[Node.js for Windows](https://nodejs.org/en/)
 
 
@@ -15,25 +16,37 @@ tags:
 安装完成之后,点击开始菜单->运行CMD,打开CMD检查一下git,nodejs,npm是否已经安装成功,检查命令如下:
 
 git
-输入```git --version```
-成功的话会看到类似如下信息:
-```
+输入
+``` bash
 git --version
-git version 2.10.0.windows.1```
+```
+成功的话会看到类似如下信息:
+``` bash
+git --version
+git version 2.10.0.windows.1
+```
 
 nodejs
-输入```node -v```
-成功的话会看到类似如下的版本号:
-```
+输入
+``` bash
 node -v
-v6.2.0```
+```
+成功的话会看到类似如下的版本号:
+``` bash
+node -v
+v6.2.0
+```
 
 npm
-输入```npm -v```
-成功的话会看到类似如下版本号:
-```
+输入
+``` bash
 npm -v
-3.8.9```
+```
+成功的话会看到类似如下版本号:
+``` bash
+npm -v
+3.8.9
+```
 
 如果以上3个命令都能显示预期结果,说明我们的开发环境准备完成了,可以进入下一步开始安装Hexo了.
 
@@ -41,30 +54,48 @@ npm -v
 
 依次运行以下命令
 
-```npm install hexo-cli -g```  //全局安装hexo手脚架
-
-```hexo init <dir>```  //dir是你需要安装到的路径和项目名称比如我需要安装到D盘下的Project文件夹下,项目文件夹叫HexoBlog,则该命令应该是:
-
-```hexo init d:/Project/HexoBlog```
-
-```cd <dir>``` //跳转到刚才安装的目录,例如我们这里应该是:
-
+全局安装hexo手脚架
+``` bash
+npm install hexo-cli -g
 ```
+
+安装到指定路径,dir是你需要安装到的路径和项目名称
+``` bash
+hexo init <dir>
+```
+例如:我需要安装到D盘下的Project文件夹下,项目文件夹叫HexoBlog,则该命令应该是:
+``` bash
+hexo init d:/Project/HexoBlog
+```
+跳转到指定路径下
+``` bash
+cd <dir>
+```
+跳转到刚才安装的目录,例如我们这里应该是:
+``` bash
 d:
-cd d:/Project/HexoBlog```
-```npm install```  //我这里在安装手脚架时自动安装了所有node_modules,如果你不确定你是否完整安装了所有开发所需modules,可以手动再运行一次.
-
-```hexo server ``` //运行一个简易的本地服务器预览生成的页面,默认的地址是http://localhost:4000/
-
-
+cd d:/Project/HexoBlog
+```
+安装依赖的modules,我这里在安装手脚架时自动安装了所有node_modules,如果你不确定你是否完整安装了所有开发所需modules,可以手动再运行一次.
+``` bash
+npm install
+```
+运行一个简易的本地服务器预览生成的页面,默认的地址是http://localhost:4000/
+``` bash
+hexo server
+```
 到这里位置,Hexo已经安装好了
 
 ## 添加文章
 
 在cmd中,指向当前目录的情况下,可以通过以下命令来新建帖子或页面:
 
-```hexo new [layout] <title>```
+``` bash
+hexo new [layout] <title>
+```
 
 比如以下命令会新建一篇标题为"HelloWorld"的帖子,因为默认的layout为post类型:
 
-```hexo new HelloWorld```
+``` bash
+hexo new HelloWorld
+```

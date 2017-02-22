@@ -99,3 +99,24 @@ hexo new [layout] <title>
 ``` bash
 hexo new HelloWorld
 ```
+
+## 生成和发布
+
+生成的命令:
+``` bash
+hexo g or hexo generate
+```
+
+发布
+首先把你的hexo项目 commit到你的github pages项目下,然后有两种方法可以发布""
+``` bash
+hexo g -d 表示生成后立即发布
+hexo d 直接发布之前通过hexo g生成的项目
+```
+
+如果你需要添加自己的域名,在/source/目录下新建一个CNAME文件,里面放入你的域名
+例如:
+``` bash
+blog.cloudjay.net
+```
+关于github pages的具体说明,具体可以参考github pages的官方文档:[Github Pages Help](https://help.github.com/categories/github-pages-basics/)

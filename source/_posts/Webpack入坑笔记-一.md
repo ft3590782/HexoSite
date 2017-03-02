@@ -180,3 +180,5 @@ module.exports={
 好了,现在所有的配置都好了,在项目根目录下输入 npm start,经过一段时间的编译,server已经启动,并自动打开了浏览器, 我们又见到了亲爱的"hello word",在JS里随便修改一些输出,然后保存,浏览器自动刷新,效果实现了!
 
 [alt]: https://pic2.zhimg.com/55fb7d622403852ff7533c6da5c620cd_b.png
+
+> 参考知识:https://zhuanlan.zhihu.com/p/20367175?columnSlug=FrontendMagazine
